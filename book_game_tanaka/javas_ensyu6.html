@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      var colors = ["red", "blue", "yellow", "green"];
+      var index = 0;
+
+      function changeColor() {
+        document.getElementById("ufo").style.color = colors[index];
+        if (++index >= colors.length) {
+          index = 0;
+        }
+      }
+
+    </script>
+  </head>
+  <body>
+    <div id="ufo"><(ooo)></div>
+    <button onclick="changeColor()">Click me</button>
+  </body>
+</html>
