@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      function keydown(e) {
+        var sw = "";
+
+        switch (e.keyCode) {
+          case 37: sw = "Left"; break;
+          case 38: sw = "Top"; break;
+          case 39: sw = "Right"; break;
+          case 40: sw = "Down"; break;
+          default: sw = "Other"; break;
+        }
+
+        document.getElementById("info").textContent = sw;
+      }
+
+      window.addEventListener('keydown', keydown);
+
+    </script>
+  </head>
+  <body>
+    <p id="info"></p>
+
+  </body>
+</html>
