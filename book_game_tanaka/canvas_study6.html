@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      #clock {
+        width: 300px;
+        height: 300px;
+      }
+    </style>
+    <script type="text/javascript">
+      var ctx, x=150, y=150, isOpen=true, isKeyDown, rotate=0;
+
+      function gobj(id) {
+        return document.getElementById(id);
+      }
+
+      function init() {
+        var canvas = gobj("canvas");
+        ctx = canvas.getContext("2d");
+
+        for (var i=0; i<12; i++) {
+          ctx.save();
+
+          var r = Math.PI / 6 * i;
+
+          ctx.translate(100, 100);
+          ctx.rotate(r);
+
+          ctx.beginPath();
+          ctx.moveTo(0, -60);
+          ctx.lineTo(0, -50);
+          ctx.stroke();
+
+          ctx.restore();
+        }
+      }
+
+    </script>
+  </head>
+  <body onload="init()">
+    <canvas id="canvas" width="600" height="400"></canvas>
+
+  </body>
+</html>
